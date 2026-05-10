@@ -3,6 +3,7 @@
   "short_name": "Gemini AI",
   "start_url": "/gemini-/",
   "display": "standalone",
+  "display_override": ["standalone", "window-controls-overlay"],
   "background_color": "#1a1a2e",
   "theme_color": "#7c5ce7",
   "icons": [
