@@ -3,7 +3,7 @@
 <head>
     <link rel="manifest" href="/gemini-/manifest.json">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
     <title>✨ Trợ Lý AI Gemini 3.1 Flash Lite - Chat & File</title>
 
     <!-- CDN: marked.js + highlight.js (có fallback nhẹ) -->
@@ -102,7 +102,31 @@
         ::-webkit-scrollbar-track { background: var(--scrollbar-track); border-radius: 10px; }
         ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+        
+        /* ========== CHẶN ZOOM - CỐ ĐỊNH TỈ LỆ ========== */
+        html, body {
+            touch-action: manipulation;
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
 
+        input, textarea, [contenteditable] {
+            -webkit-user-select: text;
+            user-select: text;
+            touch-action: auto;
+        }
+
+        img {
+            -webkit-user-drag: none;
+        }
+
+        button, a, .btn-icon, .btn-sm, .btn-new-chat {
+            touch-action: manipulation;
+        }
         #sidebar {
             width: var(--sidebar-width); min-width: var(--sidebar-width); height: 100vh;
             background: var(--bg-secondary); border-right: 1px solid var(--border);
